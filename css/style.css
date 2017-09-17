@@ -1,0 +1,331 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+body{
+    background-color:#343434;
+		min-height: 100vh;
+}
+h1, h2, h3, h4, h5, h6, p, a{
+    color:#ffffff;
+    font-family:sans-serif;
+}
+main{
+	position: relative;
+	margin: 15px 10px;
+	min-height: calc(100vh - 185px);
+}
+header {
+    height: 55px;
+    background-color: #4a4a4a;
+    position: relative;
+}
+header img{
+    width:60vw;
+    position: relative;
+    left:20vw;
+}
+header a{
+	margin-right: 5px;
+	transition: all ease .3s;
+}
+header i{
+	width: 5%;
+	font-size: 6vw;
+	margin-top: 17px;
+	margin-left: 10px;
+	color: #ffffff;
+	transition: all ease .3s;
+}
+
+header a:hover{
+	  transform: scale(1.1);
+	margin-left: -5px;
+}
+footer{
+	background-color: #4a4a4a;
+	height: 100px;
+	display: flex;
+	margin-bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+footer button, footer a{
+	background-color: #0063b3;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 3vw 12vw;
+	border-radius: 30vw;
+	font-size: 4vw;
+	position: relative;
+	border: none;
+	transition: all ease 0.6s;
+	cursor: pointer;
+	margin: auto;
+}
+footer button:hover, footer a:hover{
+    transform: scale(1.1);
+}
+
+#logo{
+	width: 60%;
+	display: flex;
+	margin: auto;
+	box-sizing: border-box;
+	padding: 15px 0;
+}
+
+#main-index button{
+    background-color:#0063b3;
+    border:none;
+    display:block;
+    border-radius:50vw;
+    width:45vw;
+    height:45vw;
+    margin: 6vh auto;
+    font-size:10vw;
+    color:#ffffff;
+    box-shadow: 0px 10px 25px 0px #000000;
+    transition: all ease-in-out .3s;
+}
+#main-index button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+		box-shadow: none
+}
+#main-index button:active{
+		background-color: #2b3990;
+    transform: scale(0.9);
+    box-shadow: none;
+		box-shadow: 0px 10px 40px 10px #000000
+}
+
+#main-index .box{
+    background-color: #343434;
+    width:40vw;
+    margin:auto;
+}
+#main-index .box p{
+    font-size:5vw;
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    margin-bottom:4vh;
+}
+#main-index .box input{
+    background-color:#343434;
+    border:none;
+    color:#ffffff;
+    text-align:center;
+    width:20vw;
+    font-size:10vw;
+    display:inline-block,
+}
+#main-index .box img{
+    width:8vw;
+    display:inline-block;
+    position: relative;
+}
+#left-arrow, #right-arrow{
+    transition: all ease .2s;
+}
+#left-arrow:hover, #right-arrow:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+/*NORMAL SEARCH*/
+
+#main-search{
+    padding:15vw 10vw 5vw 10vw;
+		box-sizing: border-box;
+}
+#main-search p{
+    display:inline;
+    font-size:5vw;
+}
+#main-search p:last-of-type{
+    display:inline-block;
+    margin-top:10vw;
+}
+#main-search select{
+    display: inline;
+    position:relative;
+    right:-20vw;
+    background-color:#343434;
+    color:#ffffff;
+    font-size:5vw;
+    border:none;
+}
+#main-search select:last-of-type{
+    right:-34vw;
+}
+#main-search input{
+    color: #ffffff;
+    background-color: #343434;
+    font-size:5vw;
+    margin-top:10vw;
+    border:none;
+    text-align:center;
+    border-bottom: #4a4a4a solid 1px;
+    position: relative;
+    left:10vw;
+}
+
+/*RESULT1, RESULT2, RESULT3, RESULT4*/
+.header-result{
+    height:10vw;
+    background-color:#4a4a4a;
+    position:relative;
+}
+.header-result i{
+    width:30%;
+    font-size:6vw;
+    margin-top:1.5vw;
+    margin-left:1vw;
+    color:#ffffff;
+    transition: all ease .3s;
+}
+.header-result i:hover{
+    transform: scale(1.1);
+    margin-left:1vw;
+}
+.header-result .back-text{
+    text-decoration: none;
+    font-size:4.5vw;
+    position: relative;
+    left: -15vw;
+    top:-0.5vw;
+    transition: all ease .5s;
+}
+.header-result .back-text:hover{
+    font-size:5vw;
+    left:-20vw;
+}
+.main-result{
+    padding:10vw 5vw;
+}
+.main-result .location-img{
+    width:70vw;
+    margin:10vh 0vw 0vh 8vw;
+}
+.main-result .p-sign{
+    width:10vw;
+    display: inline;
+    margin-right:2vw;
+    position: relative;
+    top:6vh;
+}
+.main-result h1{
+    display:inline;
+    font-size:5vw;
+}
+.main-result p{
+    font-size:3vw;
+    margin-left:13vw;
+}
+.bold{
+    font-weight:bold;
+}
+	    ul#list{
+				display: none;
+				padding: 0;
+			}
+			ul#list li{
+				color: #fff;
+				padding: 10px 20px;
+				background: #2a3990;
+				margin: 15px 10px;
+				list-style: none;
+				border: solid 4px #f9f9f9;
+				border-radius: 10px;
+				font-family: sans-serif;
+				font-size: small;
+				line-height: 25px;
+				-webkit-transition: all .2s ease-in-out;
+				-moz-transition: all .2s ease-in-out;
+				transition: all .2s ease-in-out;
+				}
+			ul#list li:hover{
+				background: #0063b3;
+			}
+			ul#list li a{
+				text-decoration: none;
+				color: #fff;
+				font-size: large;
+				display: block;
+			}
+			#frontHeader{
+				display: none;
+			}
+      /*map api*/
+
+      #map {
+        height: 100%;
+      }
+      #nav-panel select, #nav-panel input {
+        font-size: 15px;
+      }
+      #nav-panel select {
+        width: 100%;
+      }
+      #nav-panel i {
+        font-size: 12px;
+      }
+      #nav-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-family: 'Roboto','sans-serif';
+        height: 40%;
+        overflow: auto;
+      }
+      #map {
+        height: 60%;
+        width: 100%
+      }
+      main.mainGPS{
+        margin: 0;
+        height: calc(100vh - 55px);
+        color: #fff;
+      }
+
+/*loading*/
+		.loader {
+	    display: none;
+			width: 60px;
+		  height: 60px;
+		  background-color: #fff;
+		  border-radius: 100%;
+		  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+		  animation: sk-scaleout 1.0s infinite ease-in-out;
+	    position: absolute;
+	    top: calc(50% - 30px);
+	    left: calc(50% - 30px);
+		}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+ul#list li{
+	-webkit-animation: show 2s linear;
+	animation: show .4s linear;
+}
+
+@-webkit-keyframes show {
+	0% { opacity: 0; }
+	100% {  opacity: 1; }
+}
+
+@keyframes show {
+	0% { opacity: 0; }
+	100% {  opacity: 1; }
+}
