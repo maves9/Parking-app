@@ -7,3 +7,4 @@ Key components
 - google maps api
 - javascript geolocation
 - json data form odaa (open data aarhus)
+- haversine.js to calculate distance
