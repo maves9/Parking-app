@@ -29,6 +29,7 @@ header img{
 header a{
 	margin-right: 5px;
 	transition: all ease .3s;
+	cursor: pointer;
 }
 header i{
 	width: 5%;
@@ -51,7 +52,6 @@ footer{
 	position: absolute;
 	width: 100%;
 }
-
 footer button, footer a{
 	background-color: #0063b3;
 	color: #ffffff;
@@ -68,7 +68,6 @@ footer button, footer a{
 footer button:hover, footer a:hover{
     transform: scale(1.1);
 }
-
 #logo{
 	width: 60%;
 	display: flex;
@@ -76,7 +75,6 @@ footer button:hover, footer a:hover{
 	box-sizing: border-box;
 	padding: 15px 0;
 }
-
 #main-index button{
     background-color:#0063b3;
     border:none;
@@ -101,7 +99,6 @@ footer button:hover, footer a:hover{
     box-shadow: none;
 		box-shadow: 0px 10px 40px 10px #000000
 }
-
 #main-index .box{
     background-color: #343434;
     width:40vw;

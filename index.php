@@ -91,11 +91,12 @@ var ul = document.getElementById('list');
 			}
 		}
 
+
+
 function map(position){
 	var obj,
 	    xmlhttp,
-	    i,
-			ii;
+	    i;
 
 	xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("GET", "parking_data.json", true);
@@ -105,13 +106,10 @@ function map(position){
 
 		if (this.readyState == 4 && this.status == 200) {
 			obj = JSON.parse(this.responseText);
-			console.log(obj);
+
 			//var features = obj.features;
 			var features = obj.features;
-			var dbList = [];
-
 			for (i in features) {
-
 
 				var street = features[i].properties.Vejnavn;
 
@@ -121,7 +119,7 @@ function map(position){
 				var x =	position.coords.latitude;
 				var	y = position.coords.longitude;
 
-						//haversine coords to calculate
+				//haversine coords to calculate
 				const start = {
 						latitude: x,
 						longitude: y
@@ -132,19 +130,26 @@ function map(position){
 					longitude: destX
 				}
 
-				//results
-				var distanceDisplay = Math.floor(haversine(start, end) * 10) / 10;
-				var distanceBetween = haversine(start, end);
-				var avaidableSpots = distanceBetween <= searchRadius;
+				features[i].dist = haversine(start, end);
 
-				//console.log(getSorted(dbList, features));
+				}
 
-				if (avaidableSpots) {
-					var href = '"location_id/' + [i] + '.php"';
-						ul.innerHTML += `<li>` + "<a href=" + href + ">" + `${street} <br><small>` + distanceDisplay + " km. away</small></a> </li>";
+				features.sort(function(a, b){
+					return a.dist - b.dist;
+				});
+console.log(features);
+				for (var x in features) {
+					var street = features[x].properties.Vejnavn;
+					var distanceDisplay = Math.floor(features[x].dist * 10) / 10;
+					var avaidableSpots = features[x].dist <= searchRadius;
+
+					if (avaidableSpots) {
+						var href = '"location_id/' + [x] + '.php"';
+							ul.innerHTML += `<li>` + "<a href=" + href + ">" + `${street} <br><small>` + distanceDisplay + " km. away</small></a> </li>";
 						}
 				}
 
+				//loading animation
 				document.getElementById('loading').style.display = "none";
 
 				if(!ul.children[0]){
@@ -152,9 +157,7 @@ function map(position){
 				}
 			}
 		}
-
 	}
-
 }
 
 </script>
